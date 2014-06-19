@@ -10,7 +10,7 @@
     <ul test-name="communities-list">
       <li ng-repeat="c in user.communities">
         <header>
-          <a ui-sref="communities_show({id: c.id})">{{c.name}}</a>
+          <a ui-sref="communities_show(c)">{{c.name}}</a>
         </header>
         <div class="content">
           <p>{{c.description}}</p>
