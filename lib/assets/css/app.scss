@@ -99,3 +99,25 @@ header.site-header {
   border: 1px solid #f0c36d;
   background: #f9edbe;
 }
+
+
+// Topics
+
+.topics {
+  margin-top: 30px;
+
+  .col-sm-1 {width: 4%;}
+
+  li {
+    margin-bottom: 20px;
+
+    .vote {
+      font-size: 24px;
+      display: block;
+    }
+    .title {
+      font-size: 16px;
+      display: block;
+    }
+  }
+}

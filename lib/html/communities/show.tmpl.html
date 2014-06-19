@@ -1,13 +1,42 @@
-<section class="community">
+<section>
   <h1>Secretaria "{{community.name}}"</h1>
   <a ui-sref="communities_topics_new(community)">
     <i class="fa fa-plus"></i>
     Criar um tópico
   </a>
 
-  <ul>
+  <ul class="topics">
     <li ng-repeat="t in topics">
-      <a ui-sref="communities_topics_show({id: community.id, topic_id: t.id})">{{t.title}}</a>
+      <div class="row">
+        <div class="col-sm-1">
+          <i class="vote fa fa-caret-up"></i>
+          <i class="vote fa fa-caret-down"></i>
+        </div>
+        <div class="col-sm-11">
+          <div>
+            <a class="title" ui-sref="communities_topics_show({id: community.id, topic_id: t.id})">{{t.title}}</a>
+            <small>
+              <a href="#">
+                <img class="avatar" ng-src="{{ user.facebookPictureUrl() }}" alt="avatar" width="20">
+                {{ user.first_name }} {{ user.last_name }}
+              </a>
+              -
+              {{t.date | formatDate}}
+            </small>
+          </div>
+          <p>{{t.text}}</p>
+
+          <div class="live-cycle">
+            <small>Em discussão</small>
+            <small class="fa fa-long-arrow-right"></small>
+            <small>Proposta em andamento</small>
+            <small class="fa fa-long-arrow-right"></small>
+            <small>Proposta em decisão</small>
+            <small class="fa fa-long-arrow-right"></small>
+            <small>Proposta aprovada</small>
+          </div>
+        </div>
+      </div>
     </li>
   </ul>
 </section>
