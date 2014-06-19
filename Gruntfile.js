@@ -122,6 +122,7 @@ module.exports = function (grunt) {
             'lib/assets/vendor/bower/jquery/dist/jquery.js',
             'lib/assets/vendor/bower/lodash/dist/lodash.js',
             'lib/assets/vendor/bower/angular/angular.js',
+            'lib/assets/vendor/bower/momentjs/moment.js',
             'lib/assets/vendor/bower/angular-ui-router/release/angular-ui-router.js',
             'lib/assets/vendor/bower/angular-bootstrap/ui-bootstrap-tpls.js',
             'lib/assets/vendor/js/**/*.js'

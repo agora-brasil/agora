@@ -1,4 +1,13 @@
 <section class="community">
   <h1>Secretaria "{{community.name}}"</h1>
-  <a ui-sref="communities_topics_new(community)">Criar um tópico</a>
+  <a ui-sref="communities_topics_new(community)">
+    <i class="fa fa-plus"></i>
+    Criar um tópico
+  </a>
+
+  <ul>
+    <li ng-repeat="t in topics">
+      <a ui-sref="communities_topics_show({id: community.id, topic_id: t.id})">{{t.title}}</a>
+    </li>
+  </ul>
 </section>

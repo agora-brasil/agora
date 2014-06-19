@@ -38,6 +38,11 @@
         controller: 'TopicsNew',
         templateUrl: 'topics/new.tmpl.html'
       })
+        .state('communities_topics_show', {
+          url: '/communities/:id/topics/:topic_id',
+          controller: 'TopicsShow',
+          templateUrl: 'topics/show.tmpl.html'
+        })
 
 
       .state('logout', {

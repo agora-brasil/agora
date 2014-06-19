@@ -8,6 +8,7 @@
     "angular-ui-router": "~0.2.10",
     "lodash": "~2.4.1",
     "angular-bootstrap": "~0.11.0",
-    "angular-mocks": "~1.2.16"
+    "angular-mocks": "~1.2.16",
+    "momentjs": "~2.7.0"
   }
 }
