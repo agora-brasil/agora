@@ -22,7 +22,7 @@
 
       // Communities
       .state('communities_index', {
-        url: '/communities/index',
+        url: '/communities',
         controller: 'CommunitiesIndex',
         templateUrl: 'communities/index.tmpl.html'
       })
