@@ -1,12 +1,12 @@
 <form ng-submit="create()">
   <div class="form-group">
     <label>Título</label>
-    <input class="form-control" type="text" ng-bind="topic.title">
+    <input class="form-control" type="text" ng-model="topic.title">
   </div>
 
   <div class="form-group">
     <label>Texto</label>
-    <textarea class="form-control" rows="5" ng-bind="topic.body"></textarea>
+    <textarea class="form-control" rows="5" ng-model="topic.body"></textarea>
   </div>
 
   <button type="submit" class="btn btn-success">Criar tópico</button>
