@@ -35,14 +35,14 @@ describe('Home', function () {
     });
   });
 
-  describe('communities', function () {
+  describe('Communities', function () {
     beforeEach(function () {
       global.create(10).communities(function () {
         communityPage.visit();
       });
     });
 
-    it("should show uses's communities", function () {
+    it("should show user's communities", function () {
       waitForAsyncCalls().then(function () {
         communityPage.join(3).communities();
 
