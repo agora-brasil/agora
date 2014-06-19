@@ -5,7 +5,9 @@
     Criar um tópico
   </a>
 
-  <ul class="topics">
+  <p class="text-muted" ng-if="!topics.length">Ainda não há tópicos</p>
+
+  <ul class="topics" ng-if="topics.length">
     <li ng-repeat="t in topics">
       <div class="row">
         <div class="col-sm-1">
