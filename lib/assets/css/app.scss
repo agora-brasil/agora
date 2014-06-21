@@ -146,4 +146,11 @@ header.site-header {
     float: right;
     width: calc(100% - 45px);
   }
+  .body {
+    overflow: hidden;
+
+    &.collapsed {
+      max-height: 60px;
+    }
+  }
 }

@@ -8,7 +8,10 @@
       <img class="avatar" ng-src="{{comment.user.facebookPictureUrl}}" alt="avatar" width="32">
       <div>
         <a href="#">{{comment.user.first_name}} {{comment.user.last_name}}</a>
-        <p ng-bind-html="comment.body | formatBody"></p>
+        <p class="body collapsed" ng-bind-html="comment.body | formatBody"></p>
+        <a href="javascript:;" class="hide btn-collapse">
+          Mostrar mais
+        </a>
       </div>
     </li>
   </ul>
