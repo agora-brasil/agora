@@ -137,6 +137,7 @@ header.site-header {
 .comment-list {
   li {
     @extend .clearfix;
+    margin-bottom: 20px;
   }
   img {
     float: left;

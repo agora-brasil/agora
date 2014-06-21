@@ -9,6 +9,7 @@
     "lodash": "~2.4.1",
     "angular-bootstrap": "~0.11.0",
     "angular-mocks": "~1.2.16",
-    "momentjs": "~2.7.0"
+    "momentjs": "~2.7.0",
+    "angular-sanitize": "~1.2.18"
   }
 }
