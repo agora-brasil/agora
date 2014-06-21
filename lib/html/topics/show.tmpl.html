@@ -1,0 +1,25 @@
+<section>
+  <h1>{{topic.title}}</h1>
+
+  <p>{{topic.body}}</p>
+
+  <ul class="comment-list" ng-if="topic.comments.length > 0">
+    <li ng-repeat="comment in topic.comments track by $index">
+      <img class="avatar" ng-src="{{comment.user.facebookPictureUrl}}" alt="avatar" width="32">
+
+      <div>
+        <a href="#">{{comment.user.first_name}} {{comment.user.last_name}}</a>
+        <p>{{comment.body}}</p>
+      </div>
+    </li>
+  </ul>
+
+  <div class="new-comment">
+    <img class="avatar" ng-src="{{user.facebookPictureUrl()}}" alt="avatar" width="32">
+    <form ng-submit="comment()">
+      <textarea ng-model="newComment.body" class="form-control" placeholder="Faça um comentário"></textarea>
+      <button type="submit" class="btn btn-primary">Comentar</button>
+    </form>
+  </div>
+
+</section>

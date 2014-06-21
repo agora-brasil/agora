@@ -9,6 +9,19 @@ ul {
   padding: 0;
 }
 
+#loading {
+  position: fixed;
+  left: 50%;
+  top: 0;
+  padding: 5px 15px;
+  margin-left: -40px;
+  z-index: 100;
+  font-size: 15px;
+  color: #222;
+  border: 1px solid #f0c36d;
+  background: #f9edbe;
+}
+
 // Layout
 
 header.site-header {
@@ -51,8 +64,7 @@ header.site-header {
   }
 }
 
-
-// Communities
+// Rules used in many pages
 
 .communities {
   ul li {
@@ -87,23 +99,10 @@ header.site-header {
   }
 }
 
-#loading {
-  position: fixed;
-  left: 50%;
-  top: 0;
-  padding: 5px 15px;
-  margin-left: -40px;
-  z-index: 100;
-  font-size: 15px;
-  color: #222;
-  border: 1px solid #f0c36d;
-  background: #f9edbe;
-}
 
+// Page Communities
 
-// Topics
-
-.topics {
+.topics-list {
   margin-top: 30px;
 
   .col-sm-1 {width: 4%;}
@@ -119,5 +118,31 @@ header.site-header {
       font-size: 16px;
       display: block;
     }
+  }
+}
+
+
+// Page Topics
+
+.new-comment {
+  > * {
+    float: left;
+  }
+  form {
+    width: calc(100% - 45px);
+    margin-left: 10px;
+  }
+}
+
+.comment-list {
+  li {
+    @extend .clearfix;
+  }
+  img {
+    float: left;
+  }
+  div {
+    float: right;
+    width: calc(100% - 45px);
   }
 }
