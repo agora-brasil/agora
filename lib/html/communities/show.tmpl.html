@@ -15,6 +15,7 @@
           <a href="javascript:;"><i class="vote fa fa-caret-up"></i></a>
           <a href="javascript:;"><i class="vote fa fa-caret-down"></i></a>
         </div>
+
         <div class="col-sm-11">
           <div>
             <a class="title" ui-sref="communities_topics_show({id: community.id, topicId: t.id})">{{t.title}}</a>
@@ -29,14 +30,17 @@
           </div>
           <p>{{t.text}}</p>
 
-          <div class="live-cycle">
-            <small>Em discussão</small>
-            <small class="fa fa-long-arrow-right"></small>
-            <small>Proposta em andamento</small>
-            <small class="fa fa-long-arrow-right"></small>
-            <small>Proposta em decisão</small>
-            <small class="fa fa-long-arrow-right"></small>
-            <small>Proposta aprovada</small>
+          <div class="life-cycle">
+            <small ng-class="t.classForStep(STEPS.discussion)">Em discussão</small>
+
+            <small ng-class="t.classForStep(STEPS.proposal)" class="fa fa-long-arrow-right"></small>
+            <small ng-class="t.classForStep(STEPS.proposal)">Proposta em andamento</small>
+
+            <small ng-class="t.classForStep(STEPS.decision)" class="fa fa-long-arrow-right"></small>
+            <small ng-class="t.classForStep(STEPS.decision)">Proposta em decisão</small>
+
+            <small ng-class="t.classForStep(STEPS.approved)" class="fa fa-long-arrow-right"></small>
+            <small ng-class="t.classForStep(STEPS.approved)">{{t.proposalResult()}}</small>
           </div>
         </div>
       </div>

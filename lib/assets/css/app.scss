@@ -101,6 +101,16 @@ header.site-header {
   }
 }
 
+.life-cycle {
+  .todo {
+    @include opacity(0.5);
+  }
+  .done {
+    @extend .label;
+    @extend .label-success;
+  }
+}
+
 
 // Page Communities
 
