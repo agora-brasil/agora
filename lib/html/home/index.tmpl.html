@@ -1,5 +1,5 @@
-<section class="communities">
-  <h1>Suas Secretarias</h1>
+<section>
+  <h3>Suas secretarias</h3>
 
   <div ng-if="!user.communities.length">
     <p>Você ainda não participa de nenhuma secretaria</p>
@@ -7,7 +7,7 @@
   </div>
 
   <div ng-if="user.communities.length">
-    <ul test-name="communities-list">
+    <ul class="communities-list" test-name="communities-list">
       <li ng-repeat="c in user.communities">
         <header>
           <a ui-sref="communities_show(c)">{{c.name}}</a>

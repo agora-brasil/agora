@@ -66,8 +66,10 @@ header.site-header {
 
 // Rules used in many pages
 
-.communities {
-  ul li {
+.communities-list {
+  @extend .clearfix;
+
+  li {
     width: 200px;
     float: left;
     margin: 10px;
