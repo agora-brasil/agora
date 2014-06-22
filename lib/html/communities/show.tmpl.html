@@ -5,14 +5,15 @@
     Criar um tópico
   </a>
 
+  <h3>Tópicos</h3>
   <p class="text-muted" ng-if="!topics.length">Ainda não há tópicos</p>
 
   <ul class="topics-list" ng-if="topics.length">
     <li ng-repeat="t in topics">
       <div class="row">
         <div class="col-sm-1">
-          <i class="vote fa fa-caret-up"></i>
-          <i class="vote fa fa-caret-down"></i>
+          <a href="javascript:;"><i class="vote fa fa-caret-up"></i></a>
+          <a href="javascript:;"><i class="vote fa fa-caret-down"></i></a>
         </div>
         <div class="col-sm-11">
           <div>
