@@ -31,16 +31,16 @@
           <p>{{t.text}}</p>
 
           <div class="life-cycle">
-            <small ng-class="t.classForStep(STEPS.discussion)">Em discussão</small>
+            <small ng-class="t.classForStep(Steps.discussion)">Em discussão</small>
 
-            <small ng-class="t.classForStep(STEPS.proposal)" class="fa fa-long-arrow-right"></small>
-            <small ng-class="t.classForStep(STEPS.proposal)">Proposta em andamento</small>
+            <small ng-class="t.classForStep(Steps.proposal)" class="fa fa-long-arrow-right"></small>
+            <small ng-class="t.classForStep(Steps.proposal)">Proposta em andamento</small>
 
-            <small ng-class="t.classForStep(STEPS.decision)" class="fa fa-long-arrow-right"></small>
-            <small ng-class="t.classForStep(STEPS.decision)">Proposta em decisão</small>
+            <small ng-class="t.classForStep(Steps.decision)" class="fa fa-long-arrow-right"></small>
+            <small ng-class="t.classForStep(Steps.decision)">Proposta em decisão</small>
 
-            <small ng-class="t.classForStep(STEPS.approved)" class="fa fa-long-arrow-right"></small>
-            <small ng-class="t.classForStep(STEPS.approved)">{{t.proposalResult()}}</small>
+            <small ng-class="t.classForStep(Steps.approved)" class="fa fa-long-arrow-right"></small>
+            <small ng-class="t.classForStep(Steps.approved)">{{t.proposalResult()}}</small>
           </div>
         </div>
       </div>
