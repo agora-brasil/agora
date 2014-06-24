@@ -8,7 +8,7 @@
       $urlRouterProvider.otherwise("/");
 
       $stateProvider
-      .state('root', {url: "/", templateUrl: 'home/index.tmpl.html'})
+      .state('root', {url: "/", controller: 'HomeIndex', templateUrl: 'home/index.tmpl.html'})
 
       // User
       .state('user_edit', {url: '/user/edit', controller: 'UserEdit', templateUrl: 'user/edit.tmpl.html'})

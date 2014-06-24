@@ -25,4 +25,18 @@
       </li>
     </ul>
   </div>
+
+  <h3>Atividades recentes</h3>
+  <p ng-if="!topics.length">Nenhuma atividade recente</p>
+  <section ng-if="topics.length">
+    <h4>Tópicos criados</h4>
+    <ul>
+      <li ng-repeat="t in topics">
+        <a ui-sref="communities_topics_show({id: t.community.id, topic_id: t.id})">
+          {{t.title}}
+        </a>
+        - {{t.date | formatDate}}
+      </li>
+    </ul>
+  </section>
 </section>
