@@ -3,32 +3,34 @@
 
   <p>{{topic.body | formatBody}}</p>
 
-  <div class="comments-actions">
-    <span class="text-muted">Ver comentários</span>
-    <a href="javascript:;" ng-click="predicate = 'date'">
-      Mais antigos
-    </a>
-    |
-    <a href="javascript:;" ng-click="predicate = '-date'">
-      Mais Novos
-    </a>
-  </div>
+  <div ng-if="topic.comments.length > 0">
+    <div class="comments-actions">
+      <span class="text-muted">Ver comentários</span>
+      <a href="javascript:;" ng-click="predicate = 'date'">
+        Mais antigos
+      </a>
+      |
+      <a href="javascript:;" ng-click="predicate = '-date'">
+        Mais Novos
+      </a>
+    </div>
 
-  <ul class="comment-list" ng-if="topic.comments.length > 0">
-    <li ng-repeat="comment in topic.comments | orderBy:predicate track by $index">
-      <img class="avatar" ng-src="{{comment.user.facebookPictureUrl}}" alt="avatar" width="32">
-      <div>
-        <p>
-          <a href="#">{{comment.user.first_name}} {{comment.user.last_name}}</a>
-          {{comment.date | formatDate}}
-        </p>
-        <p class="body collapsed" ng-bind-html="comment.body | formatBody"></p>
-        <a href="javascript:;" class="hide btn-collapse">
-          Mostrar mais
-        </a>
-      </div>
-    </li>
-  </ul>
+    <ul class="comment-list">
+      <li ng-repeat="comment in topic.comments | orderBy:predicate track by $index">
+        <img class="avatar" ng-src="{{comment.user.facebookPictureUrl}}" alt="avatar" width="32">
+        <div>
+          <p>
+            <a href="#">{{comment.user.first_name}} {{comment.user.last_name}}</a>
+            {{comment.date | formatDate}}
+          </p>
+          <p class="body collapsed" ng-bind-html="comment.body | formatBody"></p>
+          <a href="javascript:;" class="hide btn-collapse">
+            Mostrar mais
+          </a>
+        </div>
+      </li>
+    </ul>
+  </div>
 
   <div class="new-comment">
     <img class="avatar" ng-src="{{user.facebookPictureUrl()}}" alt="avatar" width="32">
