@@ -318,7 +318,7 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-imagemin');
 
   // Build
-  grunt.registerTask('build', ['exec:clean', 'bower:install', 'jsbeautifier', 'sass', 'htmlangular', 'htmlmin', 'uglify', 'imagemin', 'copy']);
+  grunt.registerTask('build', ['exec:clean', 'bower:install', 'sass', 'htmlangular', 'htmlmin', 'uglify', 'imagemin', 'copy']);
   grunt.registerTask('build_for_tests', ['sass', 'imagemin', 'htmlmin', 'uglify', 'copy']);
   grunt.registerTask('default', ['build']);
 
