@@ -5,3 +5,4 @@ lib/assets/vendor/bower
 .deploy_output
 tmp
 agora.sublime-*
+.idea
