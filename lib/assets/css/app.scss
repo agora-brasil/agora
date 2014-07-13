@@ -64,7 +64,7 @@ header.site-header {
   }
 }
 
-// Rules used in many pages
+// Home
 
 .communities-list {
   @extend .clearfix;
@@ -98,16 +98,6 @@ header.site-header {
       height: 150px;
       padding: 10px;
     }
-  }
-}
-
-.life-cycle {
-  .todo {
-    @include opacity(0.5);
-  }
-  .done {
-    @extend .label;
-    @extend .label-success;
   }
 }
 
@@ -167,4 +157,14 @@ header.site-header {
 
 .comments-actions {
   margin: 20px 0 10px;
+}
+
+.life-cycle {
+  .todo {
+    @include opacity(0.5);
+  }
+  .done {
+    @extend .label;
+    @extend .label-success;
+  }
 }

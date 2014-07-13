@@ -11,18 +11,6 @@
         </header>
         <div class="content">
           <p>{{c.description}}</p>
-
-          <div class="actions">
-            <a href="javascript:;" ng-click="user.join(c)" class="btn btn-primary" ng-if="!user.communities.include(c)" test-name="join">
-              <i class="fa fa-heart-o"></i>
-              Participe
-            </a>
-
-            <a href="javascript:;" ng-click="user.leave(c)" class="btn btn-warning" ng-if="user.communities.include(c)" test-name="leave">
-              <i class="fa fa-heart"></i>
-              Sair
-            </a>
-          </div>
         </div>
       </li>
     </ul>

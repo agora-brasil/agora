@@ -4,8 +4,7 @@ var Home = require('../../page_objects/home.js'),
   Community = require('../../page_objects/community.js');
 
 describe('Home', function () {
-  var home = new Home(),
-    communityPage = new Community();
+  var home = new Home();
 
   beforeEach(function () {
     home.visit();
@@ -28,32 +27,6 @@ describe('Home', function () {
   describe('links to other pages', function () {
     it('should have a link to user edit page', function () {
       expect(home.userEditLink.isDisplayed()).toBeTruthy();
-    });
-
-    it('should have a link to communities page', function () {
-      expect(home.communitiesLink.isDisplayed()).toBeTruthy();
-    });
-  });
-
-  describe('Communities', function () {
-    beforeEach(function () {
-      global.create(10).communities(function () {
-        communityPage.visit();
-      });
-    });
-
-    it("should show user's communities", function () {
-      waitForAsyncCalls().then(function () {
-        communityPage.join(3).communities();
-
-        waitForAsyncCalls().then(function () {
-          home.visit();
-
-          waitForAsyncCalls().then(function () {
-            expect(home.communities.count()).toEqual(3);
-          });
-        });
-      });
     });
   });
 });

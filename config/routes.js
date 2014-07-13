@@ -14,7 +14,6 @@
       .state('user_edit', {url: '/user/edit', controller: 'UserEdit', templateUrl: 'user/edit.tmpl.html'})
 
       // Communities
-      .state('communities_index', {url: '/communities', controller: 'CommunitiesIndex', templateUrl: 'communities/index.tmpl.html'})
       .state('communities_show', {url: '/communities/:id', controller: 'CommunitiesShow', templateUrl: 'communities/show.tmpl.html'})
 
       // Topics

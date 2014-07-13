@@ -17,18 +17,4 @@ describe('Community', function () {
       expect(communityPage.communities.count()).toEqual(count);
     });
   });
-
-  it('should allow user to join communites', function () {
-    waitForAsyncCalls().then(function () {
-      expect(communityPage.joinLink().isDisplayed()).toEqual(true);
-    });
-  });
-
-  it('should allow user to leave communities', function () {
-    waitForAsyncCalls().then(function () {
-      communityPage.joinLink().click();
-
-      expect(communityPage.leaveLink().isDisplayed()).toEqual(true);
-    });
-  });
 });
