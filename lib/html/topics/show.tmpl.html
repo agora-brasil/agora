@@ -45,7 +45,7 @@
 
   <div class="col-sm-4">
     <h3>Comitê para proposta</h3>
-    <a href="javascript:;" ng-click="topic.addToProposalGroup()" ng-if="!proposalGroup.containsCurrentUser()">Candidate-se ao comitê</a>
+    <a href="javascript:;" ng-click="joinProposalGroup()" ng-if="!proposalGroup.containsCurrentUser()">Candidate-se ao comitê</a>
 
     <ul ng-if="proposalGroup.length > 0">
       <li ng-repeat="user in proposalGroup">
